@@ -1,4 +1,3 @@
-
 function tribonacci([a, b, c]: [number, number, number], n: number): number[] {
 
   let first: number = 0;
@@ -13,8 +12,12 @@ function tribonacci([a, b, c]: [number, number, number], n: number): number[] {
       return [];
     }
     
-    if (n < 3) {
-      return [n];
+    if (n === 1) {
+      return [initialArray[n -1]];
+    }
+    
+    if (n === 2) {
+      return [initialArray[n -1], initialArray[n]];
     }
 
     if (initialArray.length < n) {

@@ -8,8 +8,11 @@ function tribonacci([a, b, c], n) {
         if (n === 0) {
             return [];
         }
-        if (n < 3) {
-            return [n];
+        if (n === 1) {
+            return [initialArray[n - 1]];
+        }
+        if (n === 2) {
+            return [initialArray[n - 1], initialArray[n]];
         }
         if (initialArray.length < n) {
             //   add the three initial numbers together to get the following number
