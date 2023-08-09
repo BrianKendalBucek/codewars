@@ -17,7 +17,7 @@ function tribonacci([a, b, c]: [number, number, number], n: number): number[] {
     }
     
     if (n === 2) {
-      return [initialArray[n -1], initialArray[n]];
+      return [initialArray[n -2], initialArray[n -1]];
     }
 
     if (initialArray.length < n) {

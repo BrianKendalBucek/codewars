@@ -12,7 +12,7 @@ function tribonacci([a, b, c], n) {
             return [initialArray[n - 1]];
         }
         if (n === 2) {
-            return [initialArray[n - 1], initialArray[n]];
+            return [initialArray[n - 2], initialArray[n - 1]];
         }
         if (initialArray.length < n) {
             //   add the three initial numbers together to get the following number
