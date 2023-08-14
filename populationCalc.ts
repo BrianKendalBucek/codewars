@@ -23,8 +23,7 @@ const nbYear = (
   };
 
   recalculate(alteredPopulation, p);
-  // return counter;
-  console.log(counter)
+  return counter;
 };
 
 

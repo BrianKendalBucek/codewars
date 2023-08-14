@@ -15,8 +15,7 @@ const nbYear = (p0, percent, aug, p) => {
         }
     };
     recalculate(alteredPopulation, p);
-    // return counter;
-    console.log(counter);
+    return counter;
 };
 nbYear(1500, 5, 100, 5000);
 nbYear(1500000, 2.5, 10000, 2000000);
