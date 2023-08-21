@@ -1,5 +1,14 @@
 const stockList = (listOfArt:string[], listOfCat:string[]):string => {
-  console.log(a);
+
+  let groupedStrings: { [key: string]: string[] } = {};
+
+  listOfArt.forEach((str) => {
+
+    const firstLetter = str[0];
+
+
+  })
+
   return "...";
 }
 
@@ -7,6 +16,6 @@ const stockList = (listOfArt:string[], listOfCat:string[]):string => {
 
 
 // TEST
-const a = ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"];
-const b = ["A", "B", "C", "D"];
+const a: string[] = ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"];
+const b: string[] = ["A", "B", "C", "D"];
 stockList(a, b);

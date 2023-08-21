@@ -1,6 +1,9 @@
 "use strict";
 const stockList = (listOfArt, listOfCat) => {
-    console.log(a);
+    let groupedStrings = {};
+    listOfArt.forEach((str) => {
+        const firstLetter = str[0];
+    });
     return "...";
 };
 // TEST
