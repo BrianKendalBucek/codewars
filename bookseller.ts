@@ -1,9 +1,15 @@
 const stockList = (listOfArt:string[], listOfCat:string[]):string => {
 
+  if (listOfArt.length === 0 || listOfCat.length === 0) {
+    return '';
+  }
+
+  const result: string[] = [];
+  
   interface StringNumberObject {
     [key: string]: number;
   }
-
+  
   const obj: StringNumberObject = {
     A: 0,
     B: 0,
@@ -32,31 +38,31 @@ const stockList = (listOfArt:string[], listOfCat:string[]):string => {
     Y: 0,
     Z: 0
   }
-
+  
   listOfArt.forEach((str) => {
-
+    
     const firstLetter: string = str[0];
     const stringSplit: string[] = str.split(" ");
     const stringNumber: number = Number(stringSplit[1]);
-
+    
     for (const letter in obj) {
       if (firstLetter === letter) {
         obj[letter] += stringNumber;
       }
     }
   })
-
+  
   listOfCat.forEach((str) => {
     if (Object.keys(obj).includes(str)) {
-      console.log(obj[str])
+      // console.log(obj[str])
+      result.push(`(${str} : ${obj[str]})`);
     };
   })
-
   
-
-  // console.log(obj);
-
-  return "...";
+  const final: any = result.join(' - ');
+  
+  // console.log(final);
+  return final;
 }
 
 

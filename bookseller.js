@@ -1,5 +1,9 @@
 "use strict";
 const stockList = (listOfArt, listOfCat) => {
+    if (listOfArt.length === 0 || listOfCat.length === 0) {
+        return '';
+    }
+    const result = [];
     const obj = {
         A: 0,
         B: 0,
@@ -40,12 +44,14 @@ const stockList = (listOfArt, listOfCat) => {
     });
     listOfCat.forEach((str) => {
         if (Object.keys(obj).includes(str)) {
-            console.log(obj[str]);
+            // console.log(obj[str])
+            result.push(`(${str} : ${obj[str]})`);
         }
         ;
     });
-    // console.log(obj);
-    return "...";
+    const final = result.join(' - ');
+    // console.log(final);
+    return final;
 };
 // TEST
 const first = ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"];
