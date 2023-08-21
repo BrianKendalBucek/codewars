@@ -38,7 +38,13 @@ const stockList = (listOfArt, listOfCat) => {
             }
         }
     });
-    console.log(obj);
+    listOfCat.forEach((str) => {
+        if (Object.keys(obj).includes(str)) {
+            console.log(obj[str]);
+        }
+        ;
+    });
+    // console.log(obj);
     return "...";
 };
 // TEST

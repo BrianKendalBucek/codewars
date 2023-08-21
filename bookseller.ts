@@ -46,9 +46,15 @@ const stockList = (listOfArt:string[], listOfCat:string[]):string => {
     }
   })
 
+  listOfCat.forEach((str) => {
+    if (Object.keys(obj).includes(str)) {
+      console.log(obj[str])
+    };
+  })
+
   
 
-  console.log(obj);
+  // console.log(obj);
 
   return "...";
 }
