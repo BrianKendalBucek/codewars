@@ -26,6 +26,7 @@ function solution(number) {
             changedNumber -= num;
         }
     }
+    console.log(result);
     return result;
 }
 exports.solution = solution;
